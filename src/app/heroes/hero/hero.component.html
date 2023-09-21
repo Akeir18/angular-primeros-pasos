@@ -1,0 +1,27 @@
+<h1> {{ this.name }} </h1>
+
+<dl>
+  <td> Nombre: </td>
+  <dd> {{ this.name }} </dd>
+
+  <td> Edad: </td>
+  <dd> {{ this.age }} </dd>
+
+  <td> Método: </td>
+  <dd> {{ this.getHeroDescription()}} </dd>
+
+  <td> Capitalizado: </td>
+  <dd> {{ this.capitalizedName }} </dd>
+</dl>
+
+<button class="btn btn-primary" (click)="this.changeHero()" *ngIf="this.name !== 'spiderman'">
+  Cambiar nombre
+</button>
+
+<button class="btn btn-primary" (click)="this.changeAge()" *ngIf="this.age !== 25">
+  Cambiar edad
+</button>
+
+<button class="btn btn-primary" (click)="this.resetForm()">
+  Reiniciar formulario
+</button>
